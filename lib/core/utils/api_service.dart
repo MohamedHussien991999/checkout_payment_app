@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 
 class ApiService {
   final Dio dio = Dio();
@@ -16,5 +17,14 @@ class ApiService {
           headers: {'Authorization': "Bearer $token"},
         ));
     return response;
+  }
+
+  Future initPaymentSheet({required String paymentIntentClientSecret}) async {
+    await Stripe.instance.initPaymentSheet(
+      paymentSheetParameters: SetupPaymentSheetParameters(
+        paymentIntentClientSecret: paymentIntentClientSecret,
+        merchantDisplayName: 'Mohamed',
+      ),
+    );
   }
 }
