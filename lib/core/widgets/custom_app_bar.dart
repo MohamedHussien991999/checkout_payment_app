@@ -2,7 +2,7 @@ import 'package:checkout_payment_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-AppBar buildAppBar({final String? title,  required final BuildContext context}) {
+AppBar buildAppBar({final String? title, required final BuildContext context}) {
   return AppBar(
     leading: GestureDetector(
       onTap: () {

@@ -2,7 +2,9 @@ import 'package:checkout_payment_app/Features/checkout/presentation/views/widget
 import 'package:flutter/material.dart';
 
 class PaymentMethodsListView extends StatefulWidget {
-  const PaymentMethodsListView({super.key,});
+  const PaymentMethodsListView({
+    super.key,
+  });
 
   // final Function({required int index}) updatePaymentMethod; required this.updatePaymentMethod
   @override
