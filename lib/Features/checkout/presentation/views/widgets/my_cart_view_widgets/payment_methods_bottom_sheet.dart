@@ -1,5 +1,5 @@
+import 'package:checkout_payment_app/Features/checkout/presentation/views/widgets/my_cart_view_widgets/custom_button_bloc_consumer.dart';
 import 'package:checkout_payment_app/Features/checkout/presentation/views/widgets/payment_details_view_widgets/payment_methods_list_view.dart';
-import 'package:checkout_payment_app/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class PaymentMethodsBottomSheet extends StatefulWidget {
@@ -39,12 +39,11 @@ class _PaymentMethodsBottomSheetState extends State<PaymentMethodsBottomSheet> {
           SizedBox(
             height: 32,
           ),
-          CustomButton(text: 'Pay Continue'),
-          // CustomButtonBlocConsumer(
-          //   isPaypal: isPaypal,
-          // ),
+          CustomButtonBlocConsumer(),
+         
         ],
       ),
     );
   }
 }
+
