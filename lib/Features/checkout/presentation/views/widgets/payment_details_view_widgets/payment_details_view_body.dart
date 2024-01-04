@@ -15,13 +15,22 @@ class PaymentDetailsViewBody extends StatefulWidget {
 class _PaymentDetailsViewBodyState extends State<PaymentDetailsViewBody> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
-
+  bool isPaypal = false;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        const SliverToBoxAdapter(
-          child: PaymentMethodsListView(),
+        SliverToBoxAdapter(
+          child: PaymentMethodsListView(
+              updatePaymentMethod: ({required int index}) {
+            if (index == 0) {
+              isPaypal = false;
+            } else {
+              isPaypal = true;
+            }
+
+            setState(() {});
+          }),
         ),
         SliverToBoxAdapter(
           child: CustomCreditCard(

@@ -1,7 +1,7 @@
-import 'package:checkout_payment_app/Features/checkout/data/models/ephemeral_key_model/ephemeral_key_model.dart';
-import 'package:checkout_payment_app/Features/checkout/data/models/init_payment_sheet_input_model.dart';
-import 'package:checkout_payment_app/Features/checkout/data/models/payment_intent_input_model.dart';
-import 'package:checkout_payment_app/Features/checkout/data/models/payment_intent_model/payment_intent_model.dart';
+import 'package:checkout_payment_app/Features/checkout/data/models/stripe_models/payment_intent_input_model.dart';
+import 'package:checkout_payment_app/Features/checkout/data/models/stripe_models/ephemeral_key_model/ephemeral_key_model.dart';
+import 'package:checkout_payment_app/Features/checkout/data/models/stripe_models/init_payment_sheet_input_model.dart';
+import 'package:checkout_payment_app/Features/checkout/data/models/stripe_models/payment_intent_model/payment_intent_model.dart';
 import 'package:checkout_payment_app/core/utils/api_keys.dart';
 import 'package:checkout_payment_app/core/utils/api_service.dart';
 import 'package:dio/dio.dart';
