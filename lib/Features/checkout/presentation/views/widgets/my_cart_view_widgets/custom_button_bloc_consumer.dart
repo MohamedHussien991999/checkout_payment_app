@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:checkout_payment_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:checkout_payment_app/Features/checkout/presentation/manger/cubit/payment_cubit.dart';
 import 'package:checkout_payment_app/Features/checkout/presentation/views/thank_you_view.dart';
@@ -26,6 +28,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
         }
         if (state is PaymentFailure) {
           Navigator.of(context).pop();
+          log(state.errMessage);
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               content: Text(state.errMessage),
@@ -40,6 +43,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
                 PaymentIntentInputModel(
               amount: "100",
               currency: 'usd',
+              customerId: 'cus_PJ1gKJsCnNMPyZ',
             );
             BlocProvider.of<PaymentCubit>(context)
                 .makePayment(paymentIntentInputModel: paymentIntentInputModel);

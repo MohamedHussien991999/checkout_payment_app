@@ -1,9 +1,9 @@
-class InitiPaymentSheetInputModel {
+class InitPaymentSheetInputModel {
   final String clientSecret;
   final String customerId;
   final String ephemeralKeySecret;
 
-  InitiPaymentSheetInputModel(
+  InitPaymentSheetInputModel(
       {required this.clientSecret,
       required this.customerId,
       required this.ephemeralKeySecret});

@@ -15,7 +15,7 @@ class CheckoutRepoImpl implements CheckOutRepo {
           paymentIntentInputModel: paymentIntentInputModel);
     return  right(null);
     } catch (e) {
-   return left(ServerFailure(errMessage: e.toString()));
-    }
+   return left(ServerFailure(e.toString()));
+    }  
   }
 }
