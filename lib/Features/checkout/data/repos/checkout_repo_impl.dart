@@ -4,6 +4,7 @@ import 'package:checkout_payment_app/core/errors/failures.dart';
 import 'package:checkout_payment_app/core/utils/paypal_service.dart';
 import 'package:checkout_payment_app/core/utils/stripe_service.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutRepoImpl implements CheckOutRepo {
@@ -17,17 +18,19 @@ class CheckoutRepoImpl implements CheckOutRepo {
       await stripeService.makePayment(
           paymentIntentInputModel: paymentIntentInputModel);
       return right(null);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDiorError(e));
     } catch (e) {
-      return left(ServerFailure(e.toString()));
+      return left(ServerFailure("Try Again..........."));
     }
   }
 
   @override
- void makePaymentPaypal({
+  void makePaymentPaypal({
     required BuildContext context,
-  })  {
-      var transactionData = payPalService.getTransactionData();
+  }) {
+    var transactionData = payPalService.getTransactionData();
 
-      payPalService.executePaypalPayment(context, transactionData);
+    payPalService.executePaypalPayment(context, transactionData);
   }
 }

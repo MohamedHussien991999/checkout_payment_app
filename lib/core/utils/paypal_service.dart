@@ -41,14 +41,14 @@ class PayPalService {
           },
           onError: (error) {
             log("onError: $error");
-        
+            
 
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(error),
               ),
             );
-                Navigator.of(context).pop();
+               
           },
           onCancel: () {
             log('cancelled:');
