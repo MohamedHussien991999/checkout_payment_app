@@ -10,9 +10,16 @@ Checkout Payment App is A payment Integretion app for Products are paid (Stripe 
 - ### [Demo video =>](#demo-video)
 
 ## Main packages used
- expandable_page_view: (For Expandable Page View That make hight and width is suitable fot item)
-  fl_chart:(For Flow Chart)
-  device_preview: (Display Application in Different apps )
+  bloc: (for State Management)
+  dartz:( Error Handling -> Provides a powerful Either type for handling both successful and error states)
+  dio: (fetching data from REST APIs or other web services)
+  flutter_bloc:(BLoC Integration:)
+  flutter_credit_card: (Allows you to design the look and feel of the credit card input field to match your app's style.)
+  flutter_stripe: (Integrates the Stripe payment API into your Flutter app )
+  flutter_svg: ( to use SVG (Scalable Vector Graphics) images in your Flutter app)
+  font_awesome_flutter: ( giving you a large collection of icons for various purposes.)
+  meta: (Used for code generation and analysis tools like build_runner.)
+  flutter_paypal_payment:( Integrates the PayPal API into your Flutter app)
 
 
 ## Folder structure
