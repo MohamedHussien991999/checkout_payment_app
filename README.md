@@ -1,7 +1,7 @@
 # checkout_payment_app
-Responsive Dash Board is a mobile application developed using Flutter. It supports both Android and IOS.
+Checkout Payment App is a mobile application developed using Flutter. It supports both Android and IOS.
 
-Responsive Dash Board is a controll for your app  .
+Checkout Payment App is A payment Integretion app for Products are paid (Stripe - Paypal) .
 
 
 ## Table of contents
@@ -33,34 +33,61 @@ responsive_dash_board
 Here is the folder structure we have been using in this project:
 ```
 lib
-├── utils
-├── features
+├── Features/checkout
+├── core
 └── main.dart
 ```
 
 
+### core
+This folder containes :
+1) (errors-> for handling errors ).
+2) (utils -> for services that are used in application ).
+3) (widgets -> for widgets that are used in application)
+```
+core
+ ├── errors
+ ├── utils
+ ├── widgets 
+```                       
 ### features
 This folder containes :
 1) (views->  everything related to the screen of the application).
 2) (data -> for Models ).
 ```
+
 features
-├── dash_board_view ├── data ├── models
-         ├── presentation   ├── views  ├── widgets
-                           
-
-
+   ├── checkout ├── data 
+                ├── presentation                             
 ```
+  ## data
+  This folder containes :
+  1) (models->  model of feature).
+  2) (repos -> for repos and operation of feature ).
+  ```
+  
+   data
+     ├── models
+     ├── repos                             
+  ```
+  ## presentation
+  This folder containes :
+  1) (manger-> contain that cubit or logic).
+  2) (view -> contain on the ui or screen widets ).
+  ```
+  
+   presentation
+     ├── manger/cubit
+     ├── view                             
+  ```
+
 
 
 ## Demo Video
 
 
 
-
-https://github.com/MohamedHussien991999/responsive_dash_board/assets/93053169/f7480d4d-5fd4-4a41-8cbc-3dcbae32ac7a
-
-
+https://github.com/MohamedHussien991999/checkout_payment_app/assets/93053169/44fd5ce7-b500-4af0-8af1-840c5e55d9e5
 
 
 
